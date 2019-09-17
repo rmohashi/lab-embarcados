@@ -17,5 +17,6 @@ alias eabi-gdb="arm-none-eabi-gdb -tui --command=/home/student/.gdbinit/default"
 alias eabi-qemu="arm-none-eabi-gdb -tui --command=/home/student/.gdbinit/qemu"
 # qemu
 alias qemu="/home/student/qemu/arm-softmmu/qemu-system-arm -M versatilepb -m 128M -nographic -s -S -kernel"
+alias build_qemu="python3 /home/student/build_qemu.py"
 
 cd /home/student/src

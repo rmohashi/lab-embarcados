@@ -40,6 +40,9 @@ ADD files/.gdbinit /home/student/.gdbinit/
 # Fix ARM highlight syntax for VIM
 ADD files/asm.vim /home/student/.vim/syntax/
 
+# Add QEMU build script
+ADD files/build_qemu.py /home/student/build_qemu.py
+
 # Configure user Bash
 ADD files/.bashrc /
 RUN cat < /.bashrc >> /home/student/.bashrc
