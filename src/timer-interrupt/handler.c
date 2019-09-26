@@ -1,5 +1,8 @@
 volatile unsigned int * const UART0DR = (unsigned int *)0x101f1000;
 volatile unsigned int * const TIMER0X = (unsigned int *)0x101E200c;
+volatile unsigned int * const TIMER0V = (unsigned int *)0x301e0054;
+
+int value = 0;
 
 void print_uart0(const char *s) {
   while(*s != '\0') { /* Loop until end of string */
@@ -21,4 +24,9 @@ void print_handler_message() {
 void handler_timer() {
   *TIMER0X = (unsigned int)(0);
   print_handler_message();
+}
+
+void set_value() {
+  value = !value;
+  *TIMER0V = (unsigned int)(value);
 }
