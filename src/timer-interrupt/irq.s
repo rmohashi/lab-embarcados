@@ -67,7 +67,6 @@ do_irq_interrupt:
   ldr   r0, INTPND      @Carrega o registrador de status de interrupcao
   ldr   r0, [r0]
   tst   r0, #0x0010     @Verifica se é uma interrupcao de timer
-  blne  set_value       @Carrega um valor no TIMER0V
   blne  handler_timer   @vai para a rotina de tratamento da interrupcao de timer
   ldmfd sp!,{r0-r3,pc}^
 

@@ -23,10 +23,7 @@ void print_handler_message() {
 
 void handler_timer() {
   *TIMER0X = (unsigned int)(0);
-  print_handler_message();
-}
-
-void set_value() {
   value = !value;
   *TIMER0V = (unsigned int)(value);
+  print_handler_message();
 }
