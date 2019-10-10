@@ -1,6 +1,7 @@
 volatile unsigned int * const UART0DR = (unsigned int *)0x101f1000;
 volatile unsigned int * const TIMER0X = (unsigned int *)0x101E200c;
 volatile unsigned int * const TIMER0V = (unsigned int *)0x301e0054;
+volatile unsigned int * const TIMER0Z = (unsigned int *)0x301e001c;
 
 int value = 0;
 
@@ -19,6 +20,14 @@ void print_main_message() {
 
 void print_handler_message() {
   print_uart0("#");
+}
+
+void read_new_port() {
+  int *x = *TIMER0Z;
+  char arr[2];
+  arr[0] = (char) x;
+  arr[1] = '\0';
+  print_uart0(arr);
 }
 
 void handler_timer() {
