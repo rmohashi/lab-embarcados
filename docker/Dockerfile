@@ -16,7 +16,7 @@ RUN dpkg --add-architecture i386 && \
     apt-get install --no-install-recommends -y \
         # QEMU build dependencies
         build-essential zlib1g-dev pkg-config libglib2.0-dev binutils-dev \
-        libboost-all-dev autoconf libtool libssl-dev libpixman-1-dev git \
+        libboost-all-dev autoconf libtool libssl-dev libpixman-1-dev git gdb \
         # Multi-arch libraries
         libc6:i386 libncurses5:i386 libstdc++6:i386 libx11-6:i386 \
         # Text editors

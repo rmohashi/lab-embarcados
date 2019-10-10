@@ -5,8 +5,8 @@ export PATH=$PATH
 PATH="$PATH:/gnuarm-3.4.3/bin:/arm-2011.09/bin"
 # arm-elf
 alias arm="arm-elf-gcc -S"
-alias gcc="arm-elf-gcc -Wall -Wextra -g"
-alias gdb="arm-elf-gdb -tui --command=/home/student/.gdbinit/default"
+alias elf-gcc="arm-elf-gcc -Wall -Wextra -g"
+alias elf-gdb="arm-elf-gdb -tui --command=/home/student/.gdbinit/default"
 alias e7t="arm-elf-gdb -tui --command=/home/student/.gdbinit/evaluator7t"
 # arm-none-eabi
 alias eabi-gcc="arm-none-eabi-gcc -c -mcpu=arm926ej-s -Wall -Wextra -g"
@@ -18,5 +18,6 @@ alias eabi-qemu="arm-none-eabi-gdb -tui --command=/home/student/.gdbinit/qemu"
 # qemu
 alias qemu="/home/student/qemu/arm-softmmu/qemu-system-arm -M versatilepb -m 128M -nographic -s -S -kernel"
 alias build_qemu="python3 /home/student/build_qemu.py"
+alias gdb="/usr/bin/gdb -tui --args /home/student/qemu/arm-softmmu/qemu-system-arm -M versatilepb -m 128M -nographic -s -S -kernel"
 
 cd /home/student/src
